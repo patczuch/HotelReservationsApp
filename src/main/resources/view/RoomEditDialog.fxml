@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<BorderPane prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.to2.hotel.presenter.RoomEditDialogPresenter">
+	<center>
+		<GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints/>
+				<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+				<RowConstraints minHeight="10.0"/>
+			</rowConstraints>
+			<Label text="Room number" GridPane.rowIndex="0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Floor number" GridPane.rowIndex="1">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Single beds" GridPane.rowIndex="2">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Double beds" GridPane.rowIndex="3">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Price per day" GridPane.rowIndex="4">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="TV present" GridPane.rowIndex="6">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Balcony present" GridPane.rowIndex="7">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<Label text="Window direction" GridPane.rowIndex="5">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+
+
+			<TextField fx:id="roomNumberField" GridPane.columnIndex="1" GridPane.rowIndex="0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<TextField fx:id="floorNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<TextField fx:id="singleBedsField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<TextField fx:id="doubleBedsField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<CheckBox fx:id="tvPresentField" GridPane.columnIndex="1" GridPane.rowIndex="6">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</CheckBox>
+			<CheckBox fx:id="balconyPresentField" GridPane.columnIndex="1" GridPane.rowIndex="7">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</CheckBox>
+			<ComboBox fx:id="windowDirectionField" GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="300.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</ComboBox>
+
+		</GridPane>
+	</center>
+	<bottom>
+		<HBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+			</BorderPane.margin>
+			<Button mnemonicParsing="false" onAction="#handleOkAction" prefWidth="60.0" text="Ok">
+				<HBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</HBox.margin>
+			</Button>
+			<Button mnemonicParsing="false" onAction="#handleCancelAction" prefWidth="60.0" text="Cancel">
+				<HBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</HBox.margin>
+			</Button>
+		</HBox>
+	</bottom>
+	<opaqueInsets>
+		<Insets />
+	</opaqueInsets>
+</BorderPane>

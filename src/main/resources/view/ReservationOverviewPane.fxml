@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane fx:id="reservations" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.to2.hotel.view.ReservationOverviewController" stylesheets="@TableStyles.css">
+
+	<left>
+		<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+			<opaqueInsets>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</opaqueInsets>
+			<BorderPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</BorderPane.margin>
+			<Button fx:id="addReservationButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" onAction="#handleAddReservationAction" text="New">
+				<VBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</VBox.margin>
+			</Button>
+			<Button fx:id="editReservationButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" onAction="#handleEditReservationAction" text="Edit">
+				<VBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</VBox.margin>
+			</Button>
+			<Button fx:id="deleteReservationButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" onAction="#handleDeleteReservationAction" text="Delete">
+				<VBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</VBox.margin>
+			</Button>
+
+			<Text> </Text>
+			<Rectangle height="2.0" width="150.0"> </Rectangle>
+			<Text> </Text>
+
+			<Button fx:id="confirmPaymentButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" onAction="#handleConfirmPaymentAction" text="Confirm payment">
+				<VBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</VBox.margin>
+			</Button>
+
+			<Button fx:id="nextStateButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" onAction="#handleNextStateAction" text="Change to next state">
+				<VBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+				</VBox.margin>
+			</Button>
+
+			<Text> </Text>
+			<Rectangle height="2.0" width="150.0"> </Rectangle>
+			<Text> </Text>
+			<Text>Filters</Text>
+			<Text> </Text>
+
+			<Label text="Room number">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<ComboBox fx:id="roomNumberField" onAction="#handleFilterAction" prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</ComboBox>
+			<Text> </Text>
+			<Label text="Reservation state">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<ComboBox fx:id="reservationStateField" onAction="#handleFilterAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</ComboBox>
+			<Text> </Text>
+			<Label text="Paid">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<ComboBox fx:id="paidField" onAction="#handleFilterAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</ComboBox>
+			<Text> </Text>
+			<Label text="Customer first name" >
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<TextField fx:id="customerFirstNameField" onKeyReleased="#handleFilterTextAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<Text> </Text>
+			<Label text="Customer last name" >
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<TextField fx:id="customerLastNameField" onKeyReleased="#handleFilterTextAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<Text> </Text>
+			<Label text="Customer phone number">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<TextField fx:id="customerPhoneField" onKeyReleased="#handleFilterTextAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</TextField>
+			<Text> </Text>
+			<Label text="Earliest start date">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<DatePicker fx:id="startDatePicker" onAction="#handleFilterAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</DatePicker>
+			<Text> </Text>
+			<Label text="Latest finish date">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</Label>
+			<DatePicker fx:id="endDatePicker" onAction="#handleFilterAction"  prefWidth="150.0">
+				<GridPane.margin>
+					<Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+				</GridPane.margin>
+			</DatePicker>
+
+
+			<Text> </Text>
+			<Text> </Text>
+			<Button mnemonicParsing="false" onAction="#handleResetFiltersAction" text="Reset filters" prefWidth="150.0">
+				<HBox.margin>
+					<Insets bottom="5.0" left="5.0" right="5.0" top="100.0"/>
+				</HBox.margin>
+			</Button>
+
+
+		</VBox>
+	</left>
+
+	<center>
+		<TableView fx:id="reservationsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT" styleClass="reservationsTable" stylesheets="@TableStyles.css">
+			<placeholder>
+				<Label text=""/>
+			</placeholder>
+			<columns >
+				<TableColumn fx:id="idColumn" prefWidth="70.0" text="ID"/>
+				<TableColumn fx:id="roomColumn" prefWidth="100.0" text="Room number"/>
+				<TableColumn fx:id="stateColumn" prefWidth="120.0" text="Reservation state" />
+				<TableColumn fx:id="paidColumn" prefWidth="90.0" text="Paid" />
+				<TableColumn fx:id="customerFirstNameColumn" prefWidth="150.0" text="Customer first name" />
+				<TableColumn fx:id="customerLastNameColumn" prefWidth="150.0" text="Customer last name" />
+				<TableColumn fx:id="customerPhoneNumberColumn" prefWidth="160.0" text="Customer phone number" />
+				<TableColumn fx:id="startDateColumn" prefWidth="135.0" text="Start date" />
+				<TableColumn fx:id="finishDateColumn" prefWidth="135.0" text="Finish date" />
+				<TableColumn fx:id="durationColumn" prefWidth="120.0" text="Duration in days" />
+				<TableColumn fx:id="totalPriceColumn" prefWidth="90.0" text="Total price" />
+			</columns>
+		</TableView>
+	</center>
+
+</BorderPane>

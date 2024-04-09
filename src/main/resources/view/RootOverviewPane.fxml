@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+
+<TabPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.to2.hotel.view.RootOverviewController">
+    <Tab fx:id="reservationsTab" text="Reservations Table">
+        <fx:include fx:id="reservations" source="ReservationOverviewPane.fxml"/>
+    </Tab>
+    <Tab fx:id="roomsTab" text="Rooms Table">
+        <fx:include fx:id="rooms" source="RoomOverviewPane.fxml" />
+    </Tab>
+    <Tab fx:id="searchTab" text="Free Room Search">
+        <fx:include fx:id="search" source="RoomSearchPane.fxml" />
+    </Tab>
+</TabPane>
